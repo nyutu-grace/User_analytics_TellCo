@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  useranalyticstellco:
+    image: useranalyticstellco
+    build:
+      context: .
+      dockerfile: ./Dockerfile
