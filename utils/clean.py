@@ -1,7 +1,10 @@
 import numpy as np 
 import pandas as pd 
 
-df:pd.DataFrame
+df = pd.read_csv(r"C:\Users\sopon\OneDrive\telecom.csv")
+
+df[' Avg RTT DL (ms)'] = pd.to_numeric(df[' Avg RTT DL (ms)'], errors='coerce')
+df[' Avg RTT UL (ms)'] = pd.to_numeric(df[' Avg RTT UL (ms)'], errors='coerce')
 
 # column_names = df.columns.to_list()
 num_missing = df.isnull().sum()
